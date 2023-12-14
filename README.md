@@ -6,4 +6,5 @@ Matrix multiplication is undeniably one of the most frequently employed calculat
 
 ## Systolic Array nodes : Processing Elements
 
-
+The Datapath of PE contains three registers, and a hardware capable of computing MAC operation. The constant matrix is received from Win bus. The result of the above calculation is received from Sin bus.
+WReg is responsible for storing weights, while Dreg is used to get the matrix values and perform the MAC operation.
