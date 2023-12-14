@@ -4,7 +4,46 @@ In today's world, with the significant advancements in AI and Machine Learning a
 
 Matrix multiplication is undeniably one of the most frequently employed calculations in Machine Learning, particularly in Neural Networks. Systolic Arrays offer a solution for accelerating matrix-matrix multiplication, and they are utilized in Google TPU Accelerators. In the following section, the RTL implementation of a 3*3 systolic array is described.
 
-## Systolic Array nodes : Processing Elements
+## Systolic Array nodes : Processing Elements (PE)
 
 The Datapath of PE contains three registers, and a hardware capable of computing MAC operation. The constant matrix is received from Win bus. The result of the above calculation is received from Sin bus.
-WReg is responsible for storing weights, while Dreg is used to get the matrix values and perform the MAC operation.
+WReg is responsible for storing weights, while Dreg is used to get the matrix values and perform the MAC operation. By employing these simple PEs, it becomes feasible to compute matrix-matrix multiplications rapidly.
+
+<br/>
+
+<p align="center">
+  <img src="https://github.com/mohasnik/Systolic-Array/assets/82777963/b5bab130-8773-4681-8d3a-60bcca43d261" alt="PE datapath" width="500"/>
+  <br/>
+  Figure 1.1 - The datapath Structure of Processing Element.
+</p>
+<br/>
+<br/>
+
+
+For this PE to perform the proper operation, a control unit is needed to manage calculations and weight loading:
+<br/>
+<br/>
+
+<p align="center">
+  <img src="https://github.com/mohasnik/Systolic-Array/assets/82777963/6705713a-289f-4c95-a65c-22d5764023f8" alt="PE control unit" width="500"/>
+  <br/>
+  Figure 1.2 - The Controller Diagram of Processing Element.
+</p>
+
+
+## Systolic Array Structure
+
+By cascading multiple PEs, Systolic Arrays can be created. Note to the connections, as values in D move horizentally, but the values of S (result of MAC operation) move vertically in each 2 cycles.
+<br/>
+<br/>
+
+<p align="center">
+  <img src="https://github.com/mohasnik/Systolic-Array/assets/82777963/bfa978bc-a37e-49dd-81ea-070bb75d23e0" alt="Systolic array datapath" width="500"/>
+  <br/>
+  Figure 2.1 - The Datapath structure of Systolic Array.
+</p>
+
+
+
+
+
