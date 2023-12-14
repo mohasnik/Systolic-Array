@@ -43,6 +43,19 @@ By cascading multiple PEs, Systolic Arrays can be created. Note to the connectio
   Figure 2.1 - The Datapath structure of Systolic Array.
 </p>
 
+<br/>
+<br/>
+<br/>
+
+The Systolic Array also requires a control unit to execute the proper actions, given that the Processing Elements (PEs) are multicycle units, and the entire process necessitates multiple nodes to carry out the multiplication. The controller is also responsible for weight loading:
+<br/>
+<br/>
+
+<p align="center">
+  <img src="https://github.com/mohasnik/Systolic-Array/assets/82777963/88bccc06-1808-458a-91a5-d0446d6d8139" alt="Systolic array controller" width="500"/>
+  <br/>
+  Figure 2.2 - The Controller structure of Systolic Array.
+</p>
 
 
 
