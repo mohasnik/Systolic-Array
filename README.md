@@ -60,3 +60,7 @@ The Systolic Array also requires a control unit to execute the proper actions, g
 
 
 
+## Refrences
+- Understanding Matrix Multiplication on a Weight-Stationary Systolic Architecture : <a href="https://www.telesens.co/2018/07/30/systolic-architectures/">https://www.telesens.co/2018/07/30/systolic-architectures/ </a>
+
+
